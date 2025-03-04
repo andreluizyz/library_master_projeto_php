@@ -41,10 +41,52 @@ ob_start();
 ?>
 
 <style>
-    form {
-        max-width: 400px;
-        margin: 0 auto;
-    }
+    
+
+    .card {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card-header {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            background-color: #ff6600;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff4500;
+        }
+
+        .toggle-btn {
+            color: #ff6600;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+		
 </style>
 
 <h2>Cadastrar Livro</h2>

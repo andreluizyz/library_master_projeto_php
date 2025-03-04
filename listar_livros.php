@@ -3,16 +3,14 @@
 $titulo = "Listar Livros";
 include 'conexao.php';
 
-// Definir a página atual
+
 $paginacao = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$limite = 20; // Quantidade de livros por página
+$limite = 20; 
 $inicio = ($paginacao - 1) * $limite;
 
-// Buscar total de registros corretamente
 $total = $conexao->query("SELECT COUNT(*) FROM livros")->fetchColumn();
 $total_paginas = ceil($total / $limite);
 
-// Buscar os registros da página atual
 $sql = "SELECT * FROM livros ORDER BY created_at ASC LIMIT :inicio, :limite";
 $stmt = $conexao->prepare($sql);
 $stmt->bindValue(':inicio', $inicio, PDO::PARAM_INT);

@@ -1,7 +1,8 @@
 <?php
-
 $titulo = "Página Inicial";
 include 'conexao.php';
+
+
 
 ob_start();
 ?>
